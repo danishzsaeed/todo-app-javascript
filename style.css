@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #22c1c3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #22c1c3, #fdbb2d); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #22c1c3, #fdbb2d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    height: 100vh;
+}
+.main_content{
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 25px;
+}
+.todo_title h2{
+    font-size: 36px;
+    font-weight: 700;
+}
+.input_fields{
+    display: flex;
+}
+.input_fields input{
+    width: 80%;
+    height: 45px;
+    padding-left: 20px;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+    margin: 10px 0px;
+}
+.input_fields button{
+    background-color: #008CBA;
+    height: 45px;
+    margin: auto 0px auto 20px;
+    width: 120px;
+    border: none;
+    color: white;
+    border-radius: 20px;
+}
+.todo_contents{
+    margin-top: 20px;
+}
+ul{
+    margin-left: 20px;
+}
+ul li{
+    display: flex;
+    list-style: none;
+    height: 30px;
+    line-height: 30px;
+    align-items: center;
+    position: relative;
+}
+ul li::before{
+    font-family: "Font Awesome 6 Free";
+    font-weight: 500;
+    content: "\f111";
+    font-size: 1.25em;
+    margin-right: 10px;
+}
+ul li.checked{
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    font-family: "Font Awesome 6 Free";
+    font-weight: 500;
+    content: "\f058";
+    color: #50981f;
+    text-decoration: none;
+}
+ul li span{
+    cursor: pointer;
+    position: absolute;
+    right: 50px;
+}
+
+/* <i class="fa-regular fa-circle-check"></i>    f058*/
+/* <i class="fa-regular fa-circle"></i>          f111*/
